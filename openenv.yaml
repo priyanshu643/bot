@@ -1,0 +1,11 @@
+# openenv.yaml
+name: "datacenter-thermal-env"
+version: "1.0.0"
+description: "A real-world IoT Data Center environment where an autonomous agent manages server thermal limits and power loads via live telemetry."
+
+# The 3 mandatory graded tasks (Easy, Medium, Hard)
+tasks:
+  - "easy_cooling"
+  - "medium_balancing"
+  - "hard_cascade"
+
