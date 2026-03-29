@@ -11,5 +11,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy all your project files into the container
 COPY . .
 
-# Command to run the baseline inference script when the container starts
-CMD ["python", "inference.py"]
+# Expose the Hugging Face Space port
+EXPOSE 7860
+
+# Command to run the Environment Web Server when the container starts
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
