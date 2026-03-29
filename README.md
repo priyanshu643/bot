@@ -1,3 +1,12 @@
+---
+title: Data Center Thermal OpenEnv
+emoji: 🏢
+colorFrom: blue
+colorTo: red
+sdk: docker
+pinned: false
+---
+
 # Autonomous Data Center Thermal OpenEnv
 
 ## Environment Description & Motivation
@@ -35,7 +44,5 @@ The environment features 3 distinct tasks to evaluate agent logic, each returnin
 
 ### Docker Execution
 ```bash
-docker run -it -p 7860:7860 --platform=linux/amd64 \
-	-e HF_TOKEN="YOUR_VALUE_HERE" \
-	registry.hf.space/priyanshukumarsinha-bot:latest
-  ```
+docker build -t datacenter-env .
+docker run -e HF_TOKEN="your_token" datacenter-env
